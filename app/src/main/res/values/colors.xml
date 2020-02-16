@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorPrimary">#9BB5CF</color>
+    <color name="colorPrimaryDark">#95aabf</color>
+    <color name="colorAccent">#9BB5CF</color>
+    <color name="cardBg">#d3dce6</color>
+    <color name="darkCardText">#FC6E20</color>
+    <color name="colorPrimaryGreen">#84C284</color>
+    <color name="colorAccentButtonSuccess">#9fccc5</color>
+    <color name="colorAccentButtonPrompt">#29ccb4</color>
+    <color name="colotTaskPersonal">#FE7D1F</color>
+
+    <color name="purpleBg">#9BB5CF</color>
+    <color name="lightPurpleBg">#9BB5CF</color>
+    <color name="skillSelectedColor">#EEE9E9</color>
+    <color name="skillSelected">#8B5DCA</color>
+    <color name="lightGrey">#fff</color>
+    <color name="grey">#C7C7C7</color>
 </resources>

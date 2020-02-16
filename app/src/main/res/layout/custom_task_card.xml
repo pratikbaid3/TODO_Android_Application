@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="8dp"
+    android:paddingRight="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/profilePic"
+            android:layout_width="5dp"
+            android:layout_height="82dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp"
+            app:cardBackgroundColor="@color/colotTaskPersonal"></androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="351dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="3dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="39dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toStartOf="@+id/taskCheckBox">
+
+            <TextView
+                android:id="@+id/txtTaskName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="259dp"
+                android:gravity="center_horizontal"
+                android:text="Task 1"
+                android:textAlignment="viewStart"
+                android:textColor="@color/colotTaskPersonal"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/txtTaskDate"
+                android:layout_width="374dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTaskName"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginEnd="6dp"
+                android:gravity="center_horizontal"
+                android:text="01/12/20"
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/darker_gray"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtTaskName"
+                app:layout_constraintVertical_bias="0.0" />
+
+            <TextView
+                android:id="@+id/txtTaskDescription"
+                android:layout_width="374dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtTaskDate"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="2dp"
+
+                android:layout_marginEnd="0dp"
+                android:gravity="center_horizontal"
+                android:inputType="textMultiLine"
+                android:text="This is the first task that has been assigned to you."
+                android:textAlignment="viewStart"
+                android:textColor="@android:color/darker_gray"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtTaskDate"
+                app:layout_constraintVertical_bias="0.0" />
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/taskCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="3dp" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
