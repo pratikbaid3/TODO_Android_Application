@@ -25,7 +25,7 @@
             android:theme="@style/AppTheme">
 
             <EditText
-                android:id="@+id/input_task_notes"
+                android:id="@+id/input_task_desc"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Notes"
@@ -50,7 +50,7 @@
             android:theme="@style/AppTheme">
 
             <EditText
-                android:id="@+id/input_task_desc"
+                android:id="@+id/input_task_name"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:focusable="true"
