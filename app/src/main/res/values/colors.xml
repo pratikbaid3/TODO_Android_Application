@@ -8,7 +8,8 @@
     <color name="colorPrimaryGreen">#84C284</color>
     <color name="colorAccentButtonSuccess">#9fccc5</color>
     <color name="colorAccentButtonPrompt">#29ccb4</color>
-    <color name="colotTaskPersonal">#FE7D1F</color>
+    <color name="colorTaskPersonal">#FE7D1F</color>
+    <color name="colorTaskGroup">#4CAF50</color>
 
     <color name="purpleBg">#9BB5CF</color>
     <color name="lightPurpleBg">#9BB5CF</color>

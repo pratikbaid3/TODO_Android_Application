@@ -29,18 +29,18 @@
 
             <TextView
                 android:id="@+id/txtTaskName"
-                android:layout_width="wrap_content"
+                android:layout_width="94dp"
                 android:layout_height="wrap_content"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="7dp"
-                android:layout_marginEnd="259dp"
+                android:layout_marginEnd="253dp"
                 android:gravity="center_horizontal"
                 android:text="Task 1"
                 android:textAlignment="viewStart"
-                android:textColor="@color/colotTaskPersonal"
+                android:textColor="@color/colorTaskPersonal"
                 android:textSize="18sp" />
 
             <TextView
@@ -93,26 +93,16 @@
             android:layout_marginTop="3dp"
             android:layout_marginEnd="3dp" />
 
-        <ImageButton
-            android:layout_width="29dp"
-            android:layout_height="30dp"
-            android:layout_below="@+id/taskCheckBox"
-            android:layout_alignStart="@+id/null"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="355dp"
-            android:layout_marginTop="3dp"
-            android:layout_marginEnd="5dp"
-            android:src="@drawable/ic_close_black_24dp" />
     </RelativeLayout>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/profilePic"
-        android:layout_width="5dp"
+        android:id="@+id/taskTypeIndicator"
+        android:layout_width="8dp"
         android:layout_height="82dp"
 
         android:layout_gravity="center_vertical"
         android:layout_marginStart="5dp"
         android:layout_marginTop="0dp"
         android:layout_marginBottom="0dp"
-        app:cardBackgroundColor="@color/colotTaskPersonal"></androidx.cardview.widget.CardView>
+        app:cardBackgroundColor="@color/colorTaskPersonal"></androidx.cardview.widget.CardView>
 </androidx.cardview.widget.CardView>

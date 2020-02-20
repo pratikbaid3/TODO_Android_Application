@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.RadioButton;
 
 import com.github.clans.fab.FloatingActionButton;
 
@@ -26,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
     private ArrayList<String> mTaskName=new ArrayList<>();
     private ArrayList<String> mTaskDesc=new ArrayList<>();
     private ArrayList<String> mTaskDate=new ArrayList<>();
-    private ArrayList<String> mTaskType=new ArrayList<>();
+    private ArrayList<String> mTaskType=new ArrayList<>(); //1=GROUP 0=PERSONAL
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -48,6 +49,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                 final EditText taskName=dialog.findViewById(R.id.input_task_name);
                 final EditText taskDescription=dialog.findViewById(R.id.input_task_desc);
                 final EditText taskDate=dialog.findViewById(R.id.input_task_date);
+                final RadioButton personalBtn=dialog.findViewById(R.id.personal);
+                final RadioButton groupBtn=dialog.findViewById(R.id.gorup);
 
                 txtDate.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -61,7 +64,15 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
                     @Override
                     public void onClick(View v)
                     {
-                        //TODO Go from this to initImageBitmap with the task name, task description, task date and the task type
+                        //TODO Check if the radiobtn is toggled to group or personal
+                        if(personalBtn.isChecked())
+                        {
+                            mTaskType.add("0");
+                        }
+                        else
+                        {
+                            mTaskType.add("1");
+                        }
                         initTaskData(taskName.getText().toString(),taskDescription.getText().toString(),taskDate.getText().toString());
                         dialog.dismiss();
                     }
@@ -97,7 +108,6 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
 
     public void initTaskData(String taskName,String taskDescription, String taskDate)
     {
-        //TODO Create the data arraylist for the task name, task description and the task type, taskdate.
         mTaskName.add(taskName);
         mTaskDesc.add(taskDescription);
         mTaskDate.add(taskDate);
@@ -107,12 +117,8 @@ public class MainActivity extends AppCompatActivity implements DatePickerDialog.
     private void initRecyclerView()
     {
         RecyclerView taskRecyclerView=findViewById(R.id.recycler_view_task);
-        RecyclerViewAdapter_Task adapter=new RecyclerViewAdapter_Task(MainActivity.this,mTaskName,mTaskDesc,mTaskDate);
+        RecyclerViewAdapter_Task adapter=new RecyclerViewAdapter_Task(MainActivity.this,mTaskName,mTaskDesc,mTaskDate,mTaskType);
         taskRecyclerView.setAdapter(adapter);
         taskRecyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
-        /**RecyclerView recyclerView = findViewById(R.id.recycler_view_messages);
-        RecyclerViewAdapter_Messages adapter = new RecyclerViewAdapter_Messages(Active_Messages_Page.this, mUsername, mNotification,mUid);
-        recyclerView.setAdapter(adapter);
-        recyclerView.setLayoutManager(new LinearLayoutManager(Active_Messages_Page.this));**/
     }
 }
